@@ -1,0 +1,9 @@
+p::first-letter {
+  font-size: 48px;
+}
+P::first-line {
+  color: red;
+}
+p::after {
+  content: "-" attr(data-page) "page";
+}
