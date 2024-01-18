@@ -1,0 +1,21 @@
+@import url(./reset.css);
+#main_header {
+  height: 70px;
+  line-height: 70px;
+  background: #2cc1bd;
+  color: #fff;
+}
+#serch {
+  background: #2cc1bd;
+  padding: 15px;
+}
+#serch_wrap {
+  background: #2cc1bd;
+  padding: 15px;
+  border-radius: 0 0 10px 10px;
+}
+#serch {
+  background: #fff;
+  padding: 10px;
+  color: #9d9d9d;
+}
