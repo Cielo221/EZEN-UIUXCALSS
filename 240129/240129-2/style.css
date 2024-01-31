@@ -204,3 +204,10 @@ footer .inner .lower p {
   font: normal 12px/1 "arial";
   color: #777;
 }
+
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: ;
+}
+@sc;
