@@ -3,52 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
     <script
       src="https://kit.fontawesome.com/149677fa27.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="./style.css" />
     <title>Document</title>
   </head>
   <body>
-    <div id="wrap">
-      <div class="header_wrap">
-        <header class="header">
-          <h1>Introduction</h1>
-          <nav class="gnb">
-            <ul class="list">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">My self</a></li>
-              <li><a href="#">Hobbies</a></li>
-              <li><a href="#">Contact me</a></li>
-            </ul>
-            <div class="toggle">
-              <span>
-                <a href=""><i class="fa-solid fa-film"></i></a>
-              </span>
-              <span>
-                <a href=""><i class="fa-solid fa-bars"></i></a>
-              </span>
-            </div>
-          </nav>
-        </header>
-      </div>
-      <figure>
-        <video src="./img/visual.mp4" autoplay muted loop></video>
-        <h4>Let me tell you about me.</h4>
-      </figure>
-      <section>
-        <article class="choiyejin">
-          <div class="who">
-            <p>Who am I ?</p>
-            <p>I am</p>
-            <p>"Choi Yejin"</p>
-          </div>
-          <div><i class="fa-solid fa-chevron-down"></i></div>
-        </article>
-        <article></article>
-        <article></article>
-      </section>
+    <div id="header_wrap">
+      <header class="header">
+        <h1><a href="">Introduction</a></h1>
+        <div id="nav">
+          <ul class="nav_list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">My self</a></li>
+            <li><a href="#">Hobbies</a></li>
+            <li><a href="#">Contact me</a></li>
+          </ul>
+        </div>
+        <div class="icons">
+          <span class="icon1">
+            <a href="#"><i class="fa-solid fa-film"></i></a>
+          </span>
+          <span class="icon2">
+            <a href="#"><i class="fa-solid fa-bars"></i></a>
+          </span>
+        </div>
+      </header>
     </div>
+    <section>
+      <article class="display">
+        <div class="ocean">
+          <video
+            src="./img/pexels_videos_1918465 (2160p).mp4"
+            autoplay
+            muted
+            loop
+          ></video>
+        </div>
+        <p>Let me tell you about me.</p>
+      </article>
+      <article class="who_ami">
+        <div class="who">
+          <div>Who am i?</div>
+          <div>I am</div>
+          <div>"Choi Yejin"</div>
+        </div>
+        <div class="down">
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+      </article>
+    </section>
   </body>
 </html>

@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrap {
+  .figma {
+    margin-top: 50px;
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    &::after {
+      position: absolute;
+      top: 0;
+      left: -50px;
+      border-radius: 100px;
+      content: "";
+      width: 100px;
+      height: 100px;
+      background: inherit;
+    }
+  }
+}
