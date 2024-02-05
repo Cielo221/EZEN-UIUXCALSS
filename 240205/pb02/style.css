@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.content {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+.content span {
+  color: crimson;
+}
+.serch {
+  width: 1200px;
+  height: 50px;
+  margin: 0 auto;
+  position: relative;
+}
+.serch form {
+  height: inherit;
+  font-size: 30px;
+}
+.serch form span {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+}
+.serch form input {
+  height: 50px;
+  width: 1200px;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
