@@ -110,8 +110,12 @@ body {
       letter-spacing: 20px;
       margin-bottom: 40px;
       text-align: center;
+      position: relative;
       &:nth-child(3) {
         color: #1648b3;
+      }
+      &:hover::before {
+        width: 100%;
       }
     }
   }
@@ -144,19 +148,17 @@ body {
 }
 // profile page
 .profile {
-  width: 80%;
+  width: 1300px;
   height: 1220px;
   margin: 0 auto;
   .profile_content {
-    position: relative;
-    border: 1px solid #000;
     display: flex;
+    justify-content: space-around;
     margin-top: 30px;
     .left {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      margin-right: 50px;
       & img:nth-child(1) {
         width: 300px;
       }
@@ -168,34 +170,141 @@ body {
         font-size: 20px;
         letter-spacing: 5px;
         font-weight: 700;
+        color: #1648b3;
       }
     }
     .mid {
-      width: 500px;
       & img {
-        width: 100%;
-        object-fit: cover;
-        // object-position: right bottom;
+        width: 500px;
       }
     }
     .right {
-      width: 300px;
       position: relative;
+      width: 300px;
       span {
-        border: 1px solid #00f;
+        position: absolute;
+        top: 100px;
+        right: -25px;
+        transform: rotate(-90deg);
         font-size: 20px;
         letter-spacing: 5px;
         font-weight: 700;
-        position: absolute;
-        top: 100px;
-        right: 0;
-        transform: rotate(-90deg);
+        color: #1648b3;
       }
       .tes {
+        font-family: "Nanum Myeongjo", serif;
+        font-size: 15px;
+        line-height: 1.5rem;
+        text-align: center;
+        width: 300px;
         position: absolute;
         bottom: 0;
-        right: 0;
-        text-align: center;
+        right: 10px;
+        & p {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+// hobbies page
+.hobbies {
+  width: 1500px;
+  margin: 0 auto;
+  h4 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 20px;
+    letter-spacing: 5px;
+    color: #1648b3;
+  }
+  .hobbies_wrap {
+    width: inherit;
+    height: 1100px;
+    display: flex;
+    justify-content: space-around;
+    img {
+      width: 400px;
+      height: 700px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.5);
+      transition: all 0.2s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    .music_text,
+    .walking_text,
+    .watching_text {
+      border-top: 1px solid #000;
+      margin-top: 40px;
+      padding: 20px 0;
+      text-align: center;
+
+      span {
+        display: inline-block;
+        font-size: 26px;
+        letter-spacing: 2px;
+        font-weight: 300;
+        padding: 20px 0;
+      }
+      p {
+        font-family: "Nanum Myeongjo", serif;
+        font-size: 14px;
+        letter-spacing: 1px;
+        line-height: 1.5rem;
+      }
+    }
+    .walking {
+      align-self: flex-end;
+    }
+  }
+}
+// footer
+.footer {
+  width: 100%;
+  height: 1000px;
+  position: relative;
+  .footer_info {
+    background: #f3f3f3;
+    width: inherit;
+    height: 500px;
+    padding: 30px 60px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: end;
+    p {
+      &:nth-child(1) {
+        font-size: 24px;
+        letter-spacing: 2px;
+        border-bottom: 1.5px solid #1648b3;
+        color: #1648b3;
+      }
+      &:nth-child(2) {
+        font-family: "Nanum Myeongjo", serif;
+        text-align: end;
+        font-size: 16px;
+        line-height: 1.5rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        padding: 70px 0 0 0;
+      }
+    }
+    div {
+      font-weight: 300;
+      font-size: 16px;
+      letter-spacing: 2px;
+      span {
+        margin-left: 20px;
+        i {
+          margin-right: 8px;
+        }
       }
     }
   }
