@@ -43,6 +43,38 @@ body {
   height: calc(100% - 80px);
   overflow: hidden;
 }
+
+/* ##### header ##### */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.gnb-inner {
+  width: calc(100% - 40px);
+  height: 60px;
+  line-height: 60px;
+  margin: auto;
+  overflow: hidden;
+}
+.logo {
+  float: left;
+}
+.logo img {
+  padding-top: 17px;
+}
+.gnb {
+  float: right;
+}
+.menu {
+  display: none;
+}
+.slogan {
+  font-size: 16px;
+  font-style: italic;
+}
+
 /* ##### Section : Home ##### */
 .home-inner {
   background: #fff;
@@ -89,27 +121,27 @@ body {
   font-size: 26px;
 }
 .welcome-text span .fas {
-  color: red;
+  color: crimson;
 }
 @keyframes slideup {
   0% {
     opacity: 0;
-    margin: 50px;
+    margin-top: 50px;
   }
   20% {
     opacity: 1;
-    margin: 0px;
+    margin-top: 0;
   }
   80% {
     opacity: 1;
-    margin: 0px;
+    margin-top: 0;
   }
   100% {
     opacity: 0;
   }
 }
 .opacity-image {
-  background: url(./images/section-bg-01.jpg) center/cover no-repeat;
+  background: url("./images/section-bg-01.jpg") center/cover no-repeat;
   height: 100%;
   opacity: 0;
   animation: opacity-image 1s 2.5s ease-in;
@@ -139,13 +171,13 @@ body {
   animation-fill-mode: both;
 }
 .home-heading span:nth-child(1) {
-  animation-duration: 3s;
+  animation-delay: 3s;
 }
 .home-heading span:nth-child(2) {
-  animation-duration: 3.2s;
+  animation-delay: 3.2s;
 }
 .home-heading span:nth-child(3) {
-  animation-duration: 3.4s;
+  animation-delay: 3.4s;
 }
 @keyframes reveal {
   0% {
@@ -181,13 +213,13 @@ body {
   margin-right: 20px;
   transition: all 0.5s;
 }
+.item:hover img {
+  filter: invert(0);
+}
 .item h3 {
   font: 500 28px/1 "Montserrat";
   transition: all 0.5s;
   letter-spacing: -1px;
-}
-.item:hover img {
-  filter: invert(0);
 }
 .item:hover h3 {
   color: #000;
@@ -196,6 +228,7 @@ body {
   font-size: 18px;
   margin-top: 5px;
 }
+
 /* ##### Section : Project ##### */
 .project-inner {
   height: 100%;
@@ -362,10 +395,13 @@ input[id="tab3"]:checked ~ .tabs {
   width: 25px;
   cursor: pointer;
   text-align: center;
-  font-family: "arial";
+  font-family: Arial, sans-serif;
   background: #fff;
   background: rgba(255, 255, 255, 0.3);
   color: #000;
+  border: none;
+  padding: 0;
+  font-size: 40px;
 }
 
 /* ##### Section : Plan ##### */
