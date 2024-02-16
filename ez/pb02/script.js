@@ -58,15 +58,15 @@ $(".menu a").click(function () {
 });
 
 // scrollTo :  header > trigger btn
-$(".menu a").click(function () {
+$(".menu a, .gototop").click(function () {
   $.scrollTo(this.hash || 0, 900);
 });
 
 // header scroll event
 $(window).scroll(function () {
   if ($(window).scrollTop() > 50) {
-    $("header").addClass("active");
+    $("header, .gototop").addClass("active");
   } else {
-    $("header").removeClass("active");
+    $("header, .gototop").removeClass("active");
   }
 });

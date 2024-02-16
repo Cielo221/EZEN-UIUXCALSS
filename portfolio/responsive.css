@@ -1,0 +1,548 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media screen and (max-width: 1023px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    padding: 15px 30px;
+    background: transparent;
+    color: #fff;
+    z-index: 100;
+    transition: all 0.3s;
+  }
+  .header .nav_bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+  }
+  .header .nav_bar .logo {
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-weight: 800;
+  }
+  .header .nav_bar .nav {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .header .nav_bar .nav a {
+    margin-right: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    transition: all 0.3s;
+  }
+  .header .nav_bar .nav a:hover {
+    color: rgb(0, 0, 0);
+    padding-bottom: 5px;
+    border-bottom: 2.5px solid #000000;
+  }
+  .header.active {
+    color: #000;
+    background: #fff;
+  }
+  .header_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .header_text p {
+    color: #fff;
+    letter-spacing: 10px;
+    font-size: 14px;
+    text-shadow: 0px 0px 2px #434343;
+  }
+  .introduction {
+    width: 100%;
+    height: 1220px;
+  }
+  .introduction .myself {
+    font-size: 50px;
+    margin-bottom: 100px;
+  }
+  .introduction .myself h1 {
+    font-weight: 300;
+    letter-spacing: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+  }
+  .introduction .myself h1:nth-child(3) {
+    color: #1648b3;
+  }
+  .introduction .arrow {
+    width: 100px;
+    height: 120px;
+    position: relative;
+  }
+  .introduction .arrow span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border: 1.5px solid #000;
+    height: 120px;
+  }
+  .introduction .arrow span:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    width: 50px;
+    height: 50px;
+    border-top: 2.5px solid #000;
+    border-right: 2.5px solid #000;
+    display: inline-block;
+    transform: rotate(135deg);
+  }
+  .profile {
+    width: 100%;
+    height: 1400px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .profile .profile_content {
+    display: block;
+  }
+  .profile .profile_content .left {
+    display: block;
+    text-align: center;
+    padding-bottom: 35px;
+  }
+  .profile .profile_content .left img:nth-child(1) {
+    position: absolute;
+    top: 0%;
+    left: 17%;
+    width: 300px;
+    border-radius: 20px;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  .profile .profile_content .left img:nth-child(1):hover {
+    transform: scale(1.1);
+  }
+  .profile .profile_content .left img:nth-child(2) {
+    position: absolute;
+    top: 19%;
+    right: 17%;
+    width: 170px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .profile .profile_content .left img:nth-child(2):hover {
+    transform: scale(1.1);
+  }
+  .profile .profile_content .left span {
+    position: absolute;
+    top: 2%;
+    right: 17%;
+    padding: 12px;
+    border: 1.5px solid #1648b3;
+    border-radius: 100%;
+    font-size: 20px;
+    letter-spacing: 5px;
+    font-weight: 700;
+    color: #1648b3;
+    margin-bottom: 20px;
+  }
+  .profile .profile_content .mid {
+    display: block;
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 17%;
+  }
+  .profile .profile_content .mid img {
+    width: 400px;
+    height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .profile .profile_content .mid img:hover {
+    transform: scale(1.1);
+  }
+  .profile .profile_content .right {
+    border-top: 1px solid rgb(144, 144, 144);
+    border-bottom: 1px solid rgb(144, 144, 144);
+    width: 380px;
+    height: 200px;
+    margin: 50px auto;
+    text-align: center;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .profile .profile_content .right span {
+    display: none;
+  }
+  .profile .profile_content .right .tes {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 15px;
+    line-height: 2rem;
+    width: 300px;
+    bottom: 0;
+    right: 10px;
+  }
+  .profile .profile_content .right .tes p:nth-child(1) {
+    margin-bottom: 15px;
+  }
+  .hobbies {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .hobbies h4 {
+    display: inline-block;
+    margin: 120px 0 70px;
+    padding: 10px;
+    border-bottom: 2px solid #1648b3;
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-align: center;
+  }
+  .hobbies .hobbies_wrap {
+    justify-content: space-between;
+    padding: 0 30px;
+    width: 100%;
+    height: 600px;
+  }
+  .hobbies .hobbies_wrap img {
+    width: 235px;
+    height: 350px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .hobbies .hobbies_wrap .music_text,
+  .hobbies .hobbies_wrap .walking_text,
+  .hobbies .hobbies_wrap .watching_text {
+    border: none;
+  }
+  .hobbies .hobbies_wrap .music_text span,
+  .hobbies .hobbies_wrap .walking_text span,
+  .hobbies .hobbies_wrap .watching_text span {
+    font-size: 20px;
+    border-top: 1px solid #2d2d2d;
+    padding: 10px 0 20px;
+  }
+  .hobbies .hobbies_wrap .music_text p,
+  .hobbies .hobbies_wrap .walking_text p,
+  .hobbies .hobbies_wrap .watching_text p {
+    font-size: 13px;
+    letter-spacing: 0;
+  }
+}
+@media screen and (max-width: 1023px) and (max-width: 768px) {
+  .header .nav_bar {
+    position: relative;
+  }
+  .header .nav_bar .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .header .nav_bar .nav {
+    display: none;
+  }
+  .header .trigger {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 25px;
+    width: 27px;
+    height: 20px;
+    cursor: pointer;
+  }
+  .header .trigger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+  }
+  .header .trigger span:nth-child(1) {
+    top: 0;
+  }
+  .header .trigger span:nth-child(2) {
+    top: 50%;
+  }
+  .header .trigger span:nth-child(3) {
+    top: 100%;
+  }
+  .header_text P {
+    font-size: 14px;
+    letter-spacing: 5px;
+    text-align: center;
+    line-height: 1.4rem;
+  }
+  .introduction {
+    width: 100%;
+    height: 1000px;
+  }
+  .introduction .myself {
+    font-size: 27px;
+  }
+  .introduction .myself h1 {
+    font-weight: 400;
+    letter-spacing: 10px;
+    text-align: center;
+  }
+  .introduction .myself h1:nth-child(3) {
+    color: #1648b3;
+  }
+  .introduction .arrow {
+    width: 100px;
+    height: 90px;
+    position: relative;
+  }
+  .introduction .arrow span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border: 1px solid #000;
+    height: 90px;
+  }
+  .introduction .arrow span:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    top: 53%;
+    left: 33%;
+    width: 35px;
+    height: 35px;
+    border-top: 1.5px solid #000;
+    border-right: 1.5px solid #000;
+    display: inline-block;
+    transform: rotate(135deg);
+  }
+  .profile {
+    width: 100%;
+    height: 1000px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .profile .profile_content .left img:nth-child(1) {
+    position: static;
+    border-radius: 0;
+    width: 200px;
+    margin-right: 11px;
+  }
+  .profile .profile_content .left img:nth-child(2) {
+    position: static;
+    border-radius: 0;
+    width: 130px;
+    height: 150px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .profile .profile_content .left span {
+    position: absolute;
+    top: -8%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0;
+    border: none;
+    border-bottom: 2px solid #1648b3;
+    padding: 0;
+    padding-bottom: 5px;
+  }
+  .profile .profile_content .mid {
+    position: static;
+    border-radius: 0;
+  }
+  .profile .profile_content .mid img {
+    width: 350px;
+    height: 350px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 0;
+  }
+  .profile .profile_content .right {
+    border-top: 1px solid rgb(144, 144, 144);
+    border-bottom: 1px solid rgb(144, 144, 144);
+    width: 300px;
+    height: 200px;
+    margin: 50px auto;
+    text-align: center;
+    position: absolute;
+    bottom: 2%;
+  }
+  .profile .profile_content .right span {
+    display: none;
+  }
+  .profile .profile_content .right .tes {
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 15px;
+    line-height: 2rem;
+    width: 300px;
+    bottom: 0;
+    right: 10px;
+  }
+  .profile .profile_content .right .tes p:nth-child(1) {
+    margin-bottom: 15px;
+  }
+  .hobbies h4 {
+    margin: 70px 0;
+    padding: 16px;
+    border-radius: 100%;
+    border: 2px solid #1648b3;
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+  .hobbies .hobbies_wrap {
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+  }
+  .hobbies .hobbies_wrap img {
+    width: 300px;
+    height: 500px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  .hobbies .hobbies_wrap img:hover {
+    transform: none;
+  }
+  .hobbies .hobbies_wrap .music_text,
+  .hobbies .hobbies_wrap .walking_text,
+  .hobbies .hobbies_wrap .watching_text {
+    border: none;
+    margin-top: 0px;
+    padding: 20px 0;
+    text-align: center;
+  }
+  .hobbies .hobbies_wrap .music_text:hover p,
+  .hobbies .hobbies_wrap .walking_text:hover p,
+  .hobbies .hobbies_wrap .watching_text:hover p {
+    transition: all 0.7s;
+    opacity: 1;
+  }
+  .hobbies .hobbies_wrap .music_text span,
+  .hobbies .hobbies_wrap .walking_text span,
+  .hobbies .hobbies_wrap .watching_text span {
+    display: inline-block;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    padding: 8px 0;
+    border: none;
+    position: relative;
+  }
+  .hobbies .hobbies_wrap .music_text span::after,
+  .hobbies .hobbies_wrap .walking_text span::after,
+  .hobbies .hobbies_wrap .watching_text span::after {
+    content: "";
+    width: 80px;
+    position: absolute;
+    height: 2px;
+    top: 50%;
+    right: -100px;
+    background: #000;
+  }
+  .hobbies .hobbies_wrap .music_text span::before,
+  .hobbies .hobbies_wrap .walking_text span::before,
+  .hobbies .hobbies_wrap .watching_text span::before {
+    content: "";
+    width: 80px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: -100px;
+    background: #000;
+  }
+  .hobbies .hobbies_wrap .music_text p,
+  .hobbies .hobbies_wrap .walking_text p,
+  .hobbies .hobbies_wrap .watching_text p {
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 1.5rem;
+    margin: 30px auto;
+    background-color: #dedede;
+    border: 1px solid #d6d6d6;
+    border-radius: 10px;
+    width: 300px;
+    opacity: 0;
+  }
+  .footer {
+    width: 100%;
+    height: 700px;
+  }
+  .footer .footer_info {
+    width: inherit;
+    height: 400px;
+    background: #dedede;
+    border-radius: 35px 35px 0 0;
+    border-top: 1px solid #d6d6d6;
+  }
+  .footer .footer_info p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 450;
+    width: 300px;
+    padding-bottom: 7px;
+    border-bottom: 1.5px solid #1648b3;
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .footer .footer_info .name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    letter-spacing: 2px;
+    padding: 5px;
+    margin: 0 auto;
+  }
+  .footer .footer_info .name br {
+    display: none;
+  }
+  .footer .footer_info div {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .footer .footer_info div span {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  .footer .footer_info div span:nth-child(1) {
+    text-align: center;
+    width: 100%;
+  }
+  .footer .footer_info div span:nth-child(2) {
+    width: 260px;
+    text-align: center;
+  }
+}/*# sourceMappingURL=responsive.css.map */
