@@ -1,7 +1,7 @@
-// import { API_KEY } from "./env.js";
+import { API_KEY } from "./env.js";
 
 const getCurrentWather = (latitude, longitude) => {
-  const URL = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=0f5ad0281ce98f791899c533baf507fb&units=metric`;
+  const URL = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}b&units=metric`;
 
   fetch(URL)
     .then((response) => response.json())
