@@ -10,7 +10,7 @@
     ></script>
     <!-- custom -->
     <link rel="stylesheet" href="./style.css" />
-    <script src="./script.js"></script>
+    <script defer src="./script.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -21,9 +21,9 @@
             <div class="wrapper_left_header">
               <div class="today">
                 <span>today</span>
-                <span class="zero">0</span>
+                <span class="zero">1207</span>
                 <span>| TOTAL</span>
-                <span>12345</span>
+                <span>980221</span>
               </div>
             </div>
             <div class="wrapper_left_body">
@@ -77,14 +77,28 @@
               </div>
             </div>
             <div class="wrapper_right_body">
-              <iframe
+              <!-- <iframe
+                id="contentFrame"
+                src="./home.html"
+                frameborder="0"
+              ></iframe> -->
+              <!-- <iframe
                 id="contentFrame"
                 src="./game.html"
+                frameborder="0"
+              ></iframe> -->
+              <iframe
+                id="contentFrame"
+                src="./jukebox.html"
                 frameborder="0"
               ></iframe>
             </div>
           </div>
-          <div class="navigation"></div>
+          <div class="navigation">
+            <div id="menuHome" class="navigation_item">홈</div>
+            <div id="menuGame" class="navigation_item">게임</div>
+            <div id="menuJukebox" class="navigation_item">쥬크박스</div>
+          </div>
         </div>
       </div>
     </div>

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Single+Day&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +12,9 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
+body {
+  font-family: "Single Day";
+}
 /* common */
 .background {
   background: url("./contents/rain.jpg") center/cover no-repeat;
@@ -100,7 +104,7 @@ a {
   padding-top: 5px;
 }
 .profile_detail span {
-  font-size: 13px;
+  font-size: 15px;
 }
 .left_body_footer {
   width: 100%;
@@ -153,5 +157,25 @@ iframe {
   border: none;
 }
 /* wrapper_navigation */
-
-/* home section */
+.navigation {
+  width: 70px;
+  height: 110px;
+  position: absolute;
+  top: 20%;
+  right: -69px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.navigation_item {
+  width: 100%;
+  height: 33px;
+  background: #808080;
+  color: #fff;
+  border: 1px solid #000;
+  border-radius: 0 5px 5px 0;
+  text-align: center;
+  line-height: 30px;
+  font-size: 14px;
+  cursor: pointer;
+}
