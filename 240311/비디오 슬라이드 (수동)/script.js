@@ -5,13 +5,13 @@ const slides = document.querySelectorAll(".slide");
 const navPrev = document.querySelector("#prev");
 const navNext = document.querySelector("#next");
 
-//slide count
+// slide count
 const slideCount = slides.length;
 for (let i = 0; i < slideCount; i++) {
   slides[i].style.left = `${i * 100}%`;
 }
 
-/** slide height */
+// slide height
 let topHeight = 0;
 
 const calculateTallestSlide = () => {
@@ -23,18 +23,19 @@ const calculateTallestSlide = () => {
   sliderWrapper.style.height = `${topHeight}px`;
   sliderContainer.style.height = `${topHeight}px`;
 };
+
 calculateTallestSlide();
 
-let currntIndex = 0;
+let currentIndex = 0;
 
 const updateNav = () => {
-  if (currntIndex === 0) {
+  if (currentIndex === 0) {
     navPrev.classList.add("disabled");
   } else {
     navPrev.classList.remove("disabled");
   }
 
-  if (currntIndex === slideCount - 1) {
+  if (currentIndex === slideCount - 1) {
     navNext.classList.add("disabled");
   } else {
     navNext.classList.remove("disabled");
@@ -45,14 +46,14 @@ const updateNav = () => {
 const gotoSlide = (i) => {
   sliderContainer.style.left = `${i * -100}%`;
   sliderContainer.classList.add("animated");
-  currntIndex = i;
+  currentIndex = i;
   updateNav();
 };
 
 navPrev.addEventListener("click", (e) => {
   e.preventDefault();
-  if (currntIndex > 0) {
-    gotoSlide(currntIndex - 1);
+  if (currentIndex > 0) {
+    gotoSlide(currentIndex - 1);
   } else {
     gotoSlide(slideCount - 1);
   }
@@ -60,8 +61,8 @@ navPrev.addEventListener("click", (e) => {
 
 navNext.addEventListener("click", (e) => {
   e.preventDefault();
-  if (currntIndex < slideCount - 1) {
-    gotoSlide(currntIndex + 1);
+  if (currentIndex < slideCount - 1) {
+    gotoSlide(currentIndex + 1);
   } else {
     gotoSlide(0);
   }
