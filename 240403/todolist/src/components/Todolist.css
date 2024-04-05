@@ -1,0 +1,21 @@
+.Todolist .serchbar {
+  margin: 20px 0;
+  padding: 8px;
+  width: 100%;
+  border: 1px solid rgb(227, 192, 255);
+  border-radius: 5px;
+}
+.Todolist h4 {
+  color: #be95ff;
+}
+.Todolist input::placeholder {
+  color: #955bf1;
+}
+.Todolist .serchbar:focus {
+  outline: none;
+}
+.Todolist .list_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
